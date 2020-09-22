@@ -119,7 +119,7 @@ public class BabyNameRater extends Application {
             }
             else {
                 if (mapForGirl[year - 2001].containsKey(name)) {
-                    lblResult.setText("The " + gender + " name " + name + " is rank #" + mapForBoy[year - 2001].get(name) + " in the year " + year);
+                    lblResult.setText("The " + gender + " name " + name + " is rank #" + mapForGirl[year - 2001].get(name) + " in the year " + year);
                 }
                 else {
                     lblResult.setText("The " + gender + " name " + name + " is not ranked in the year " + year);
