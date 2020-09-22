@@ -126,6 +126,34 @@ public class BabyNameRater extends Application {
                 }
             }
         });
+        
+        tfName.setOnAction(e -> {
+            int year = cboYear.getValue();
+            String gender;
+            if (cboGender.getValue().equals("Male")) {
+                gender = "boy";
+            }
+            else {
+                gender = "girl";
+            }
+            String name = tfName.getText().trim();
+            if (gender.equals("boy")) {
+                if (mapForBoy[year - 2001].containsKey(name)) {
+                    lblResult.setText("The " + gender + " name " + name + " is rank #" + mapForBoy[year - 2001].get(name) + " in the year " + year);
+                }
+                else {
+                    lblResult.setText("The " + gender + " name " + name + " is not ranked in the year " + year);
+                }
+            }
+            else {
+                if (mapForGirl[year - 2001].containsKey(name)) {
+                    lblResult.setText("The " + gender + " name " + name + " is rank #" + mapForGirl[year - 2001].get(name) + " in the year " + year);
+                }
+                else {
+                    lblResult.setText("The " + gender + " name " + name + " is not ranked in the year " + year);
+                }
+            }
+        });
     }
     
     public static void main(String[] args) {
