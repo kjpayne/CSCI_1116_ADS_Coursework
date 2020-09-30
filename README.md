@@ -2,4 +2,4 @@
 
 This contains coursework for Algorithms and Data Structures
 
-It contains assignments from: Chapters 20, 21, 22, 24
+It contains assignments from: Chapters 20-24
